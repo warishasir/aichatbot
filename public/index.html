@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111827" />
+    <title>Aichabo — AI Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header>
+        <a class="brand" href="/" aria-label="Aichabo home"><span class="brand-mark">✦</span> aichabo</a>
+        <button id="clear-chat" class="ghost-button" type="button">New chat</button>
+      </header>
+
+      <section id="chat" class="chat" aria-live="polite">
+        <div class="welcome" id="welcome">
+          <p class="eyebrow">YOUR THOUGHTFUL AI COMPANION</p>
+          <h1>What’s on your mind?</h1>
+          <p class="welcome-copy">Ask a question, explore an idea, or get help with your next step.</p>
+          <div class="suggestions">
+            <button type="button" class="suggestion">Help me plan my day</button>
+            <button type="button" class="suggestion">Explain a complex topic simply</button>
+            <button type="button" class="suggestion">Brainstorm ideas with me</button>
+          </div>
+        </div>
+      </section>
+
+      <form id="chat-form" class="composer">
+        <label class="sr-only" for="message">Message Aichabo</label>
+        <textarea id="message" rows="1" placeholder="Message Aichabo…" autocomplete="off"></textarea>
+        <button id="send" class="send-button" type="submit" aria-label="Send message">↑</button>
+      </form>
+      <p class="hint">Aichabo can make mistakes. Check important information.</p>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
