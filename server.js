@@ -11,6 +11,10 @@ const root = path.dirname(fileURLToPath(import.meta.url));
 app.use(express.json({ limit: "1mb" }));
 app.use(express.static(path.join(root, "public")));
 
+app.get("/chat", (_req, res) => {
+  res.sendFile(path.join(root, "public", "chat.html"));
+});
+
 app.post("/api/chat", async (req, res) => {
   const { messages } = req.body ?? {};
 

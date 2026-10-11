@@ -1,42 +1,60 @@
 <!doctype html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#111827" />
-    <title>Aichabo — AI Assistant</title>
+    <meta name="theme-color" content="#f97316" />
+    <title>همراه — پروژه چت‌بات آموزشی</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="home.css" />
   </head>
   <body>
-    <main class="app-shell">
-      <header>
-        <a class="brand" href="/" aria-label="Aichabo home"><span class="brand-mark">✦</span> aichabo</a>
-        <button id="clear-chat" class="ghost-button" type="button">New chat</button>
-      </header>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="صفحه اصلی همراه"><span class="brand-mark">هـ</span><span>همراه</span></a>
+      <nav aria-label="ناوبری اصلی">
+        <a href="#about">درباره پروژه</a>
+        <a href="#how-it-works">نحوه کار</a>
+        <a class="nav-chat" href="/chat">آزمایش چت‌بات</a>
+      </nav>
+    </header>
 
-      <section id="chat" class="chat" aria-live="polite">
-        <div class="welcome" id="welcome">
-          <p class="eyebrow">YOUR THOUGHTFUL AI COMPANION</p>
-          <h1>What’s on your mind?</h1>
-          <p class="welcome-copy">Ask a question, explore an idea, or get help with your next step.</p>
-          <div class="suggestions">
-            <button type="button" class="suggestion">Help me plan my day</button>
-            <button type="button" class="suggestion">Explain a complex topic simply</button>
-            <button type="button" class="suggestion">Brainstorm ideas with me</button>
+    <main id="top">
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="kicker">پروژه آموزشی مدرسه</p>
+          <h1>همراه؛ از پرسش تا پاسخ</h1>
+          <p class="lead">همراه یک چت‌بات آموزشی است که برای شناخت هوش مصنوعی ساخته شده است. با آن می‌توانیم سؤال بپرسیم و ببینیم یک چت‌بات چگونه پاسخ می‌سازد.</p><p class="english" lang="en" dir="ltr">Hamrah is an educational chatbot project for exploring artificial intelligence and learning how chatbots answer questions.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#about">آشنایی با پروژه</a>
+            <a class="button button-secondary" href="/chat">آزمایش چت‌بات <span aria-hidden="true">←</span></a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="chat-card">
+            <div class="card-top"><span class="mini-logo">هـ</span><span>همراه</span><i></i><i></i><i></i></div>
+            <div class="question">هوش مصنوعی چیست؟</div>
+            <div class="answer">هوش مصنوعی به رایانه کمک می‌کند تا از اطلاعات یاد بگیرد و پاسخ بدهد.</div>
           </div>
         </div>
       </section>
 
-      <form id="chat-form" class="composer">
-        <label class="sr-only" for="message">Message Aichabo</label>
-        <textarea id="message" rows="1" placeholder="Message Aichabo…" autocomplete="off"></textarea>
-        <button id="send" class="send-button" type="submit" aria-label="Send message">↑</button>
-      </form>
-      <p class="hint">Aichabo can make mistakes. Check important information.</p>
+      <section id="about" class="section container two-column">
+        <div><p class="section-label">درباره همراه</p><h2>همراه چیست؟</h2></div>
+        <div><p>همراه یک برنامه گفت‌وگومحور است. شما سؤال خود را می‌نویسید و چت‌بات تلاش می‌کند پاسخی ساده و قابل فهم بدهد.</p><p>این پروژه برای دانش‌آموزان ساخته شده تا با یک نمونه واقعی از کاربرد هوش مصنوعی آشنا شوند؛ بدون این‌که نیاز باشد دانش فنی داشته باشند.</p><p class="english" lang="en" dir="ltr">Hamrah is a chat program. Students write a question, and the chatbot tries to give a clear answer.</p></div>
+      </section>
+
+      <section class="section soft-section"><div class="container two-column"><div><p class="section-label">هدف پروژه</p><h2>چرا این پروژه ساخته شد؟</h2></div><div><p>هدف اصلی، یادگیری با انجام دادن است. در ساخت همراه یاد گرفتیم هوش مصنوعی چگونه در یک برنامه استفاده می‌شود و یک گفت‌وگو با چت‌بات چگونه شکل می‌گیرد.</p><p class="english" lang="en" dir="ltr">The goal is learning by doing: exploring AI, understanding chatbot conversations, and building a useful school project.</p><ul class="check-list"><li>شناخت بهتر هوش مصنوعی</li><li>یادگیری ساخت یک پروژه کاربردی</li><li>آزمایش پرسش‌ها و پاسخ‌های چت‌بات</li></ul></div></div></section>
+
+      <section id="how-it-works" class="section container"><div class="centered-heading"><p class="section-label">روش کار</p><h2>همراه چگونه کار می‌کند؟</h2><p>این روند در سه قدم ساده انجام می‌شود.</p></div><div class="steps"><article class="step"><span class="step-number">۱</span><div class="step-icon">⌨</div><h3>نوشتن سؤال</h3><p>کاربر سؤال خود را در صفحه چت می‌نویسد.</p></article><span class="arrow" aria-hidden="true">←</span><article class="step"><span class="step-number">۲</span><div class="step-icon">✦</div><h3>پردازش پرسش</h3><p>سؤال به یک سرویس هوش مصنوعی فرستاده می‌شود.</p></article><span class="arrow" aria-hidden="true">←</span><article class="step"><span class="step-number">۳</span><div class="step-icon">◌</div><h3>نمایش پاسخ</h3><p>پاسخ ساخته‌شده در گفت‌وگو نشان داده می‌شود.</p></article></div></section>
+
+      <section class="section soft-section"><div class="container"><div class="centered-heading"><p class="section-label">یادگیری در ساخت پروژه</p><h2>فناوری‌های استفاده‌شده</h2><p>هر بخش کوچک، کار مشخصی در این پروژه دارد.</p></div><div class="tech-grid"><article><span>HTML</span><p>ساختار و محتوای صفحه‌های پروژه را می‌سازد.</p></article><article><span>CSS</span><p>رنگ‌ها، فاصله‌ها و ظاهر صفحه را مرتب می‌کند.</p></article><article><span>JavaScript</span><p>فرستادن پیام و نمایش پاسخ‌ها را انجام می‌دهد.</p></article><article><span>Node.js + Express</span><p>سرور پروژه و مسیر گفت‌وگو را اجرا می‌کند.</p></article><article><span>Groq AI</span><p>سؤال را به مدل هوش مصنوعی می‌رساند و پاسخ را برمی‌گرداند.</p></article></div></div></section>
+
+      <section class="section container"><div class="try-card"><div><p class="section-label">حالا شما امتحان کنید</p><h2>یک سؤال از همراه بپرسید</h2><p>مثلاً بنویسید: <strong>«هوش مصنوعی چیست؟»</strong></p></div><a class="button button-primary" href="/chat">رفتن به چت‌بات <span aria-hidden="true">←</span></a></div></section>
+
+      <section class="conclusion container"><p class="section-label">نتیجه‌گیری</p><h2>از یک ایده تا یک پروژه واقعی</h2><p>همراه نشان می‌دهد که هوش مصنوعی می‌تواند بخشی از یک برنامه ساده و مفید باشد. با ساخت این پروژه، یاد گرفتیم که چگونه یک صفحه وب، یک سرور و هوش مصنوعی با هم کار می‌کنند.</p><p class="english" lang="en" dir="ltr">This project shows how a web page, a server, and AI can work together to make a helpful chatbot.</p></section>
     </main>
-    <script src="app.js"></script>
+    <footer>پروژه آموزشی «همراه» برای ارائه مدرسه</footer>
   </body>
 </html>

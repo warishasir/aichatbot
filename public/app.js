@@ -13,7 +13,7 @@ function addMessage(role, content, extraClass = "") {
   row.className = `message ${role} ${extraClass}`;
   const avatar = document.createElement("span");
   avatar.className = "avatar";
-  avatar.textContent = role === "assistant" ? "✦" : "You";
+  avatar.textContent = role === "assistant" ? "هـ" : "شما";
   const bubble = document.createElement("div");
   bubble.className = "bubble";
   bubble.textContent = content;
@@ -37,7 +37,7 @@ async function submit(text) {
   addMessage("user", content);
   save();
   input.value = ""; resize(); send.disabled = true;
-  const typing = addMessage("assistant", "Thinking…", "typing");
+  const typing = addMessage("assistant", "در حال فکر کردن…", "typing");
   try {
     const response = await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ messages }) });
     const data = await response.json();
@@ -48,7 +48,7 @@ async function submit(text) {
     save();
   } catch (error) {
     typing.remove();
-    addMessage("assistant", `Sorry, ${error.message}`);
+    addMessage("assistant", `متأسفم، ${error.message}`);
   } finally { send.disabled = false; input.focus(); }
 }
 form.addEventListener("submit", (event) => { event.preventDefault(); submit(input.value); });

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f97316" />
+    <title>همراه — چت‌بات آموزشی</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header><a class="brand" href="/" aria-label="صفحه اصلی همراه"><span class="brand-mark">هـ</span> همراه</a><button id="clear-chat" class="ghost-button" type="button">گفت‌وگوی جدید</button></header>
+      <section id="chat" class="chat" aria-live="polite"><div class="welcome" id="welcome"><p class="eyebrow">چت‌بات آموزشی</p><h1>چه پرسشی دارید؟</h1><p class="welcome-copy">سؤال خود را بنویسید تا همراه با زبان ساده پاسخ دهد.</p><div class="suggestions"><button type="button" class="suggestion">هوش مصنوعی چیست؟</button><button type="button" class="suggestion">به من برای درس خواندن کمک کن</button><button type="button" class="suggestion">یک موضوع را ساده توضیح بده</button></div></div></section>
+      <form id="chat-form" class="composer"><label class="sr-only" for="message">پیام به همراه</label><textarea id="message" rows="1" placeholder="پیام خود را بنویسید…" autocomplete="off"></textarea><button id="send" class="send-button" type="submit" aria-label="ارسال پیام">↑</button></form>
+      <p class="hint">همراه ممکن است اشتباه کند. اطلاعات مهم را بررسی کنید.</p>
+    </main><script src="app.js"></script>
+  </body>
+</html>
