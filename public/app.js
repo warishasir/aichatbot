@@ -13,7 +13,7 @@ function addMessage(role, content, extraClass = "") {
   row.className = `message ${role} ${extraClass}`;
   const avatar = document.createElement("span");
   avatar.className = "avatar";
-  avatar.textContent = role === "assistant" ? "هـ" : "شما";
+  avatar.textContent = role === "assistant" ? "" : "شما";
   const bubble = document.createElement("div");
   bubble.className = "bubble";
   bubble.textContent = content;
