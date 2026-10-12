@@ -1,63 +1,21 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f97316" />
-    <title>همراه — پروژه چت‌بات آموزشی</title>
-    <link rel="icon" type="image/png" href="assets/hamrah-icon.png" />
-    <link rel="apple-touch-icon" href="assets/hamrah-icon.png" />
-    <link rel="manifest" href="site.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="home.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="صفحه اصلی همراه"><img src="assets/hamrah-logo.png" alt="همراه" /></a>
-      <nav aria-label="ناوبری اصلی">
-        <a href="#about">درباره پروژه</a>
-        <a href="#how-it-works">نحوه کار</a>
-        <a class="nav-chat" href="/chat">آزمایش چت‌بات</a>
-      </nav>
-    </header>
-
-    <main id="top">
-      <section class="hero container">
-        <div class="hero-copy">
-          <p class="kicker">پروژه آموزشی مدرسه</p>
-          <h1>همراه؛ از پرسش تا پاسخ</h1>
-          <p class="lead">همراه یک چت‌بات آموزشی است که برای شناخت هوش مصنوعی ساخته شده است. با آن می‌توانیم سؤال بپرسیم و ببینیم یک چت‌بات چگونه پاسخ می‌سازد.</p><p class="english" lang="en" dir="ltr">Hamrah is an educational chatbot project for exploring artificial intelligence and learning how chatbots answer questions.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#about">آشنایی با پروژه</a>
-            <a class="button button-secondary" href="/chat">آزمایش چت‌بات <span aria-hidden="true">←</span></a>
-          </div>
-        </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="chat-card">
-            <div class="card-top"><img src="assets/hamrah-icon.png" alt="" /><i></i><i></i><i></i></div>
-            <div class="question">هوش مصنوعی چیست؟</div>
-            <div class="answer">هوش مصنوعی به رایانه کمک می‌کند تا از اطلاعات یاد بگیرد و پاسخ بدهد.</div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section container two-column">
-        <div><p class="section-label">درباره همراه</p><h2>همراه چیست؟</h2></div>
-        <div><p>همراه یک برنامه گفت‌وگومحور است. شما سؤال خود را می‌نویسید و چت‌بات تلاش می‌کند پاسخی ساده و قابل فهم بدهد.</p><p>این پروژه برای دانش‌آموزان ساخته شده تا با یک نمونه واقعی از کاربرد هوش مصنوعی آشنا شوند؛ بدون این‌که نیاز باشد دانش فنی داشته باشند.</p><p class="english" lang="en" dir="ltr">Hamrah is a chat program. Students write a question, and the chatbot tries to give a clear answer.</p></div>
-      </section>
-
-      <section class="section soft-section"><div class="container two-column"><div><p class="section-label">هدف پروژه</p><h2>چرا این پروژه ساخته شد؟</h2></div><div><p>هدف اصلی، یادگیری با انجام دادن است. در ساخت همراه یاد گرفتیم هوش مصنوعی چگونه در یک برنامه استفاده می‌شود و یک گفت‌وگو با چت‌بات چگونه شکل می‌گیرد.</p><p class="english" lang="en" dir="ltr">The goal is learning by doing: exploring AI, understanding chatbot conversations, and building a useful school project.</p><ul class="check-list"><li>شناخت بهتر هوش مصنوعی</li><li>یادگیری ساخت یک پروژه کاربردی</li><li>آزمایش پرسش‌ها و پاسخ‌های چت‌بات</li></ul></div></div></section>
-
-      <section id="how-it-works" class="section container"><div class="centered-heading"><p class="section-label">روش کار</p><h2>همراه چگونه کار می‌کند؟</h2><p>این روند در سه قدم ساده انجام می‌شود.</p></div><div class="steps"><article class="step"><span class="step-number">۱</span><div class="step-icon">⌨</div><h3>نوشتن سؤال</h3><p>کاربر سؤال خود را در صفحه چت می‌نویسد.</p></article><span class="arrow" aria-hidden="true">←</span><article class="step"><span class="step-number">۲</span><div class="step-icon">✦</div><h3>پردازش پرسش</h3><p>سؤال به یک سرویس هوش مصنوعی فرستاده می‌شود.</p></article><span class="arrow" aria-hidden="true">←</span><article class="step"><span class="step-number">۳</span><div class="step-icon">◌</div><h3>نمایش پاسخ</h3><p>پاسخ ساخته‌شده در گفت‌وگو نشان داده می‌شود.</p></article></div></section>
-
-      <section class="section soft-section"><div class="container"><div class="centered-heading"><p class="section-label">یادگیری در ساخت پروژه</p><h2>فناوری‌های استفاده‌شده</h2><p>هر بخش کوچک، کار مشخصی در این پروژه دارد.</p></div><div class="tech-grid"><article><span>HTML</span><p>ساختار و محتوای صفحه‌های پروژه را می‌سازد.</p></article><article><span>CSS</span><p>رنگ‌ها، فاصله‌ها و ظاهر صفحه را مرتب می‌کند.</p></article><article><span>JavaScript</span><p>فرستادن پیام و نمایش پاسخ‌ها را انجام می‌دهد.</p></article><article><span>Node.js + Express</span><p>سرور پروژه و مسیر گفت‌وگو را اجرا می‌کند.</p></article><article><span>Groq AI</span><p>سؤال را به مدل هوش مصنوعی می‌رساند و پاسخ را برمی‌گرداند.</p></article></div></div></section>
-
-      <section class="section container"><div class="try-card"><div><p class="section-label">حالا شما امتحان کنید</p><h2>یک سؤال از همراه بپرسید</h2><p>مثلاً بنویسید: <strong>«هوش مصنوعی چیست؟»</strong></p></div><a class="button button-primary" href="/chat">رفتن به چت‌بات <span aria-hidden="true">←</span></a></div></section>
-
-      <section class="conclusion container"><p class="section-label">نتیجه‌گیری</p><h2>از یک ایده تا یک پروژه واقعی</h2><p>همراه نشان می‌دهد که هوش مصنوعی می‌تواند بخشی از یک برنامه ساده و مفید باشد. با ساخت این پروژه، یاد گرفتیم که چگونه یک صفحه وب، یک سرور و هوش مصنوعی با هم کار می‌کنند.</p><p class="english" lang="en" dir="ltr">This project shows how a web page, a server, and AI can work together to make a helpful chatbot.</p></section>
-    </main>
-    <footer>پروژه آموزشی «همراه» برای ارائه مدرسه</footer>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f97316" /><title>همراه — ارائه چت‌بات آموزشی</title>
+  <link rel="icon" type="image/png" href="assets/hamrah-icon.png" /><link rel="apple-touch-icon" href="assets/hamrah-icon.png" /><link rel="manifest" href="site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet" /><link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="#start" aria-label="شروع ارائه"><img src="assets/hamrah-logo.png" alt="همراه" /></a><a class="chat-link" href="/chat">آزمایش چت‌بات <span>←</span></a></header>
+  <main id="start">
+    <section class="hero container"><div><p class="eyebrow">پروژهٔ آموزشی مکتب</p><h1>همراه؛ از پرسش تا پاسخ</h1><p>یک معرفی کوتاه از چت‌بات‌های هوش مصنوعی و پروژهٔ همراه.</p></div><img src="assets/hamrah-icon.png" alt="" /></section>
+    <nav class="section-nav container" aria-label="بخش‌های ارائه"><a href="#what">۱. چت‌بات چیست؟</a><a href="#how">۲. چگونه کار می‌کند؟</a><a href="#uses">۳. کاربردها</a><a href="#project">۴. پروژه همراه</a><a href="#try">۵. نمایش عملی</a></nav>
+    <section id="what" class="section container"><article class="presentation-card"><div class="card-top"><span class="number">۱</span><p class="eyebrow">چت‌بات چیست؟</p></div><div class="card-grid"><div class="content"><h2>چت‌بات هوش مصنوعی چیست؟</h2><p>چت‌بات یک برنامه است که می‌توانیم با آن از طریق پیام صحبت کنیم. ما سؤال می‌پرسیم و چت‌بات برای ما جواب می‌دهد.</p><details><summary>متن برای تشریح</summary><p>اول بیایید بفهمیم چت‌بات چیست. چت‌بات یک برنامه است که ما می‌توانیم با آن گپ بزنیم. مثلاً یک سؤال می‌پرسیم و او برای ما جواب می‌دهد.</p></details></div><div class="visual"><img class="section-image" src="assets/hamrah-logo.png" alt="لوگوی همراه" /></div></div></article></section>
+    <section id="how" class="section container"><article class="presentation-card"><div class="card-top"><span class="number">۲</span><p class="eyebrow">چت‌بات چگونه کار می‌کند؟</p></div><div class="card-grid"><div class="content"><h2>چگونه کار می‌کند؟</h2><ol class="steps"><li><span>۱</span> سؤال خود را می‌نویسیم</li><li><span>۲</span> هوش مصنوعی سؤال را بررسی می‌کند</li><li><span>۳</span> پاسخ را دریافت می‌کنیم</li></ol><details><summary>متن برای تشریح</summary><p>طرز کار آن بسیار ساده است. ما سؤال خود را می‌نویسیم، هوش مصنوعی سؤال را بررسی می‌کند و بعد جواب را به ما نشان می‌دهد.</p></details></div><div class="visual"><img class="section-image" src="assets/hamrah-icon.png" alt="لوگوی چت‌بات همراه" /></div></div></article></section>
+    <section id="uses" class="section container"><article class="presentation-card"><div class="card-top"><span class="number">۳</span><p class="eyebrow">کاربردهای چت‌بات</p></div><div class="card-grid"><div class="content"><h2>چت‌بات چه فایده دارد؟</h2><ul class="benefits"><li>کمک در درس‌ها</li><li>توضیح موضوعات پیچیده</li><li>پاسخ به سؤال‌ها</li><li>پیدا کردن ایده‌های جدید</li></ul><p class="note">جواب‌هایش همیشه درست نیست؛ معلومات مهم را بررسی کنید.</p><details><summary>متن برای تشریح</summary><p>ما می‌توانیم از چت‌بات برای یادگیری درس‌ها، فهمیدن موضوعات سخت و پیدا کردن معلومات استفاده کنیم. البته جواب‌هایش همیشه درست نیست و باید معلومات مهم را بررسی کنیم.</p></details></div><div class="visual"><img class="section-image" src="assets/hamrah-logo.png" alt="لوگوی همراه" /></div></div></article></section>
+    <section id="project" class="section container"><article class="presentation-card"><div class="card-top"><span class="number">۴</span><p class="eyebrow">معرفی پروژه همراه</p></div><div class="card-grid"><div class="content"><h2>پروژه همراه</h2><p>همراه یک چت‌بات هوش مصنوعی است که از طریق یک وب‌سایت می‌توانیم با آن گفت‌وگو کنیم.</p><p class="website" dir="ltr">aichatbotafg.vercel.app</p><details><summary>متن برای تشریح</summary><p>این‌جا پروژه همراه را می‌بینیم. در این وب‌سایت می‌توانیم سؤال خود را بنویسیم و پاسخ بگیریم. حالا بیایید آن را به شکل عملی امتحان کنیم.</p></details></div><div class="visual"><img class="section-image" src="assets/hamrah-logo.png" alt="لوگوی همراه" /></div></div></article></section>
+    <section id="try" class="section container last-section"><article class="presentation-card"><div class="card-top"><span class="number">۵</span><p class="eyebrow">نمایش عملی چت‌بات</p></div><div class="card-grid"><div class="content"><h2>بیایید امتحان کنیم!</h2><p>یک سؤال برای چت‌بات بنویس و جوابش را ببین.</p><div class="question-box"><span>هوش مصنوعی چیست؟ به زبان ساده توضیح بده.</span><button id="copy-question" type="button">کاپی کردن سؤال</button></div><a class="start-chat" href="/chat">رفتن به چت‌بات <span>←</span></a><p id="copy-status" class="copy-status" role="status"></p><details><summary>متن برای تشریح</summary><p>حالا من یک سؤال را وارد می‌کنم تا ببینیم چت‌بات چگونه جواب می‌دهد. همان‌طور که می‌بینید، می‌توانیم سؤال‌های مختلف بپرسیم و گفت‌وگو را ادامه بدهیم.</p></details></div><div class="visual"><img class="section-image" src="assets/hamrah-icon.png" alt="لوگوی چت‌بات همراه" /></div></div></article></section>
+  </main><footer>پروژهٔ آموزشی «همراه» برای ارائهٔ مکتب</footer><script src="home.js"></script>
+</body></html>
