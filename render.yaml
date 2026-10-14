@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: aichabo
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /chat
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
