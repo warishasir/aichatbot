@@ -7,23 +7,48 @@ const app = express();
 const port = process.env.PORT || 3000;
 const model = process.env.GROQ_MODEL || "openai/gpt-oss-120b";
 const root = path.dirname(fileURLToPath(import.meta.url));
+const identityAnswerEnglish = "This was made by Waris Hasir.";
+const identityAnswerPersian = "این پروژه را Waris Hasir ساخته است.";
+
+function isWhoMadeThisQuestion(text = "") {
+  const normalized = text.toLowerCase().replace(/\s+/g, " ").trim();
+
+  return /(who\s+made\s+this|who\s+created\s+this|who\s+made\s+you|who\s+built\s+this|who\s+is\s+the\s+maker|who\s+is\s+your\s+creator|who\s+is\s+your\s+maker|who\s+made\s+this\s+website|چه\s+کسی\s+این\s+را\s+ساخت|چه\s+کسی\s+این\s+را\s+ساخت|چه\s+کسی\s+ساخت|کی\s+این\s+را\s+ساخت|این\s+را\s+کی\s+ساخت|سازنده|نویسنده|مخترع)/i.test(normalized);
+}
+
+function getIdentityAnswer(text = "") {
+  return /[\u0600-\u06FF]/.test(text) ? identityAnswerPersian : identityAnswerEnglish;
+}
 
 app.use(express.json({ limit: "1mb" }));
-app.use(express.static(path.join(root, "public")));
+
+app.get(["/", "/index.html"], (_req, res) => {
+  res.redirect("/chat");
+});
 
 app.get("/chat", (_req, res) => {
   res.sendFile(path.join(root, "public", "chat.html"));
 });
 
+app.use(express.static(path.join(root, "public")));
+
 app.post("/api/chat", async (req, res) => {
   const { messages } = req.body ?? {};
 
-  if (!process.env.GROQ_API_KEY) {
-    return res.status(500).json({ error: "The server is missing GROQ_API_KEY. Add it to your .env file." });
-  }
-
   if (!Array.isArray(messages) || messages.length === 0) {
     return res.status(400).json({ error: "Please send at least one message." });
+  }
+
+  const latestUserMessage = [...messages].reverse().find((message) => {
+    return message && message.role === "user" && typeof message.content === "string" && message.content.trim();
+  });
+
+  if (latestUserMessage && isWhoMadeThisQuestion(latestUserMessage.content)) {
+    return res.json({ answer: getIdentityAnswer(latestUserMessage.content) });
+  }
+
+  if (!process.env.GROQ_API_KEY) {
+    return res.status(500).json({ error: "The server is missing GROQ_API_KEY. Add it to your .env file." });
   }
 
   const cleanMessages = messages
